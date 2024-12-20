@@ -1,0 +1,84 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.6rem;
+}
+
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 7rem;
+}
+
+.hero-section {
+   max-width: 55rem;
+   text-align: center;
+   font-size: 1.4rem;
+}
+
+header p:first-child {
+   font-size: 4.5rem;
+   margin-bottom: 2rem;
+}
+
+.cv-section {
+   margin-top: 7rem;
+   background-color: red;
+   display: flex;
+   justify-content: center;
+}
+
+.cv-section form {
+   background-color: #F5F7F9;
+   padding: 1rem;
+   width: 40rem;
+   color: #57595B;
+}
+
+.contact-information {
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+}
+
+.cv-section form input {
+   background-color: #E9EEEE;
+   border: none;
+   outline: none;
+   padding: 1rem;
+   border-radius: .2rem;
+   width: 100%;
+   margin-top: 1rem;
+}
+
+.section-name {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.section-name p {
+   font-weight: 500;
+   font-size: 1.8rem;
+}
+
+.section-index {
+   background-color: #79CB82;
+   width: 2.5rem;
+   height: 2.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 1.5rem;
+   color: #fff;
+}
