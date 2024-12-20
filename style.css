@@ -32,25 +32,29 @@ header p:first-child {
 
 .cv-section {
    margin-top: 7rem;
-   background-color: red;
    display: flex;
    justify-content: center;
 }
 
 .cv-section form {
    background-color: #F5F7F9;
-   padding: 1rem;
+   padding: 2rem;
    width: 40rem;
    color: #57595B;
 }
 
-.contact-information {
+.form-information {
    display: flex;
    flex-direction: column;
    gap: 2.5rem;
+   margin-bottom: 3rem;
 }
 
-.cv-section form input {
+.form-information div:not(div:first-of-type) {
+   padding: 0 2rem;
+}
+
+.cv-section form input, textarea {
    background-color: #E9EEEE;
    border: none;
    outline: none;
