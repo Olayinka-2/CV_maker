@@ -4,12 +4,17 @@
    box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html {
    font-size: 62.5%;
 }
 
 body {
    font-size: 1.6rem;
+   font-family: "Roboto", serif;
+   font-weight: normal;
+   font-style: normal;
 }
 
 header {
@@ -37,7 +42,7 @@ header p:first-child {
 }
 
 .cv-section form {
-   background-color: #F5F7F9;
+   background-color: #f0f4f8;
    padding: 2rem;
    width: 40rem;
    color: #57595B;
@@ -55,7 +60,7 @@ header p:first-child {
 }
 
 .cv-section form input, textarea {
-   background-color: #E9EEEE;
+   background-color: #dbdddd;
    border: none;
    outline: none;
    padding: 1rem;
@@ -97,4 +102,50 @@ header p:first-child {
    font-size: 1.8rem;
    background-color: #79CB82;
    color: #fff;
+}
+
+main {
+   background: #ae79cb;
+}
+
+.cv-page-section {
+   display: flex;
+   justify-content: center;
+   margin-top: 10rem;
+}
+
+.cv {
+   width: min(85rem, 80%);
+   background-color: white;
+}
+
+.cv aside {
+   width: 35%;
+   background-color: #252525;
+   padding-top: 6rem;
+}
+
+.profile-picture {
+   margin: 0 auto 4rem;
+   position: relative;
+   width: 140px; 
+   height: 140px; 
+   background-color: lightblue;
+   transform: rotate(45deg);
+   overflow: hidden;
+   border: .25rem groove #F1AB08;
+}
+
+.img-container {
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   transform: rotate(-45deg) translateY(-6rem);
+}
+
+.profile-picture img {
+   object-fit: cover;
+   object-position: 100% 100%;
+   width: 220px;
+   height: 220px;
 }
