@@ -188,3 +188,48 @@ main {
    margin-top: 2rem;
    font-size: 1.8rem;
 }
+
+.experience-section {
+   
+}
+
+.experience-section h3 {
+   margin: 8rem 0 3rem;
+   font-size: 2.5rem;
+   text-transform: uppercase;
+   color: #F1AB08;
+   letter-spacing: .2rem;
+}
+
+.experience-content {
+   display: flex;
+   padding: 0 2rem 2rem;
+   border-left: 2px solid #F1AB08;
+   position: relative;
+}
+
+.experience-content:last-of-type {
+   border: none;
+}
+
+.experience-content::before {
+   content: " ";
+   width: 1.5rem;
+   height: 1.5rem;
+   background-color: #F1AB08;
+   border-radius: 50%;
+   position: absolute;
+   top: 0;
+   left: -.8rem;
+}
+
+.experience-date {
+   flex-basis: 50%;
+   font-size: 2rem;
+   color: #F1AB08;
+}
+
+.experience-details h4 {
+   margin-bottom: 1rem;
+   font-size: 2rem;
+}
