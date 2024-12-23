@@ -118,10 +118,13 @@ main {
    width: min(85rem, 80%);
    background-color: white;
    display: flex;
+   box-shadow: 2px 2px 4px #57595B;
+   height: max-content;
+   min-height: 80rem;
 }
 
 .cv aside {
-   flex-basis: 35%;
+   flex-basis: 40%;
    background-color: #252525;
    padding: 5rem 2rem;
 }
@@ -189,11 +192,7 @@ main {
    font-size: 1.8rem;
 }
 
-.experience-section {
-   
-}
-
-.experience-section h3 {
+.experience-section h3, .education-section h3 {
    margin: 8rem 0 3rem;
    font-size: 2.5rem;
    text-transform: uppercase;
@@ -201,18 +200,18 @@ main {
    letter-spacing: .2rem;
 }
 
-.experience-content {
+.experience-content, .education-content {
    display: flex;
    padding: 0 2rem 2rem;
    border-left: 2px solid #F1AB08;
    position: relative;
 }
 
-.experience-content:last-of-type {
+.experience-content:last-of-type, .education-content:last-of-type {
    border: none;
 }
 
-.experience-content::before {
+.experience-content::before, .education-content::before {
    content: " ";
    width: 1.5rem;
    height: 1.5rem;
@@ -223,13 +222,13 @@ main {
    left: -.8rem;
 }
 
-.experience-date {
+.experience-date, .education-date {
    flex-basis: 50%;
    font-size: 2rem;
    color: #F1AB08;
 }
 
-.experience-details h4 {
+.experience-details h4, .education-details h4 {
    margin-bottom: 1rem;
    font-size: 2rem;
 }
