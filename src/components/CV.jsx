@@ -4,7 +4,7 @@ import Experience from "./cvExperience";
 import Education from "./cvEducation";
 import EditButton from "./editBtn";
 
-export default function Cv() {
+export default function Cv({name}) {
    return (
       <>
          <main>
@@ -13,7 +13,7 @@ export default function Cv() {
             <div className="cv">
                <Aside />
                <section className="cv-content">
-                  <Profile />
+                  <Profile profileName = {name}  />
                   <Experience />
                   <Education />
                </section>

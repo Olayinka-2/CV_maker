@@ -1,7 +1,10 @@
-// import { useState } from "react"
+export default function FormContact({name, setName}) {
+   
 
-export default function FormContact() {
-   // let [name, setName] = useState("");
+   function handleEvent(event) {
+      setName(event.target.value);
+   }
+
    return (
       <>
       <div className="form-information" id="form-contact">
@@ -11,7 +14,9 @@ export default function FormContact() {
                   </div>
                   <div>
                      <label htmlFor="Name">Name:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="text" id="name" placeholder="Enter your full name" required />
+                     <input type="text" id="name" placeholder="Enter your full name" required 
+                     onChange={handleEvent}
+                     value={name}/>
                   </div>
                   <div>
                      <label htmlFor="email">Email:<span style={{"color": "red"}}>*</span> </label>
