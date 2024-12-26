@@ -1,6 +1,5 @@
-
-export default function Edit() {
+export default function EditButton({text, className}) {
    return (
-      <button className="edit-cv">Edit CV</button>
+      <button className={className}>{text}</button>
    )
 }

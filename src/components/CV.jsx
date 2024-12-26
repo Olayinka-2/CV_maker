@@ -1,15 +1,15 @@
 import Aside from "./asideSection";
-import Profile from "./profile";
+import Profile from "./cvProfile";
 import Experience from "./cvExperience";
 import Education from "./cvEducation";
-import Edit from "./editBtn";
+import EditButton from "./editBtn";
 
 export default function Cv() {
    return (
       <>
          <main>
          <section className="cv-page-section">
-         <Edit />
+         <EditButton text="Edit CV" className= 'edit-cv' />
             <div className="cv">
                <Aside />
                <section className="cv-content">

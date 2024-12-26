@@ -1,4 +1,7 @@
+// import { useState } from "react"
+
 export default function FormContact() {
+   // let [name, setName] = useState("");
    return (
       <>
       <div className="form-information" id="form-contact">
