@@ -4,14 +4,17 @@ import Cv from "./components/CV";
 import { useState } from "react";
 
 function App() {
-  const [name, setName] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+  });
+
 
 
     return (
       <>
         <Header />
-        <CvForm name={name} setName = {setName} />
-        <Cv name={name}/>
+        <CvForm formData={formData} setFormData = {setFormData} />
+        <Cv formData={formData}/>
       </>
     )
 }

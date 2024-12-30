@@ -1,8 +1,11 @@
-export default function FormContact({name, setName}) {
-   
+export default function FormContact({formData, setFormData}) {
 
    function handleEvent(event) {
-      setName(event.target.value);
+      setFormData({
+         ...formData,
+         name: event.target.value
+      });
+      console.log(formData);
    }
 
    return (
@@ -16,7 +19,7 @@ export default function FormContact({name, setName}) {
                      <label htmlFor="Name">Name:<span style={{"color": "red"}}>*</span> </label>
                      <input type="text" id="name" placeholder="Enter your full name" required 
                      onChange={handleEvent}
-                     value={name}/>
+                     value={formData["name"]}/>
                   </div>
                   <div>
                      <label htmlFor="email">Email:<span style={{"color": "red"}}>*</span> </label>
@@ -28,7 +31,7 @@ export default function FormContact({name, setName}) {
                   </div>
                   <div>
                      <label htmlFor="tel">Telephone Number:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="tel" id="tel" placeholder="0909332223" required />
+                     <input type="tel" id="tel" placeholder="0909332223" required/>
                   </div>
                   
                </div>

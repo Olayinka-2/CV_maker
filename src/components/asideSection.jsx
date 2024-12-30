@@ -1,4 +1,5 @@
 export default function Aside() {
+
    return (
       <>
       <aside>
@@ -11,7 +12,7 @@ export default function Aside() {
                      </div>
                      <div>
                         <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/phone-disconnected.png" alt="phone-disconnected"/>
-                        <p>0903r3r3r3</p>
+                        <p>09000550605</p>
                      </div>
                      <div>
                         <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/>
