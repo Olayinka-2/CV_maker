@@ -1,4 +1,18 @@
-export default function Aside() {
+export default function Aside({profileInfo}) {
+   let placeholderEmail = "";
+   let placeholderTel = "";
+
+   if(profileInfo["email"] == "") {
+      placeholderEmail = 'Johndoe@gmail.com';
+   } else {
+      placeholderEmail = profileInfo["email"]
+   }
+
+   if(profileInfo["telephone"] == "") {
+      placeholderTel = '09000550605';
+   } else {
+      placeholderTel = profileInfo["telephone"]
+   }
 
    return (
       <>
@@ -12,7 +26,7 @@ export default function Aside() {
                      </div>
                      <div>
                         <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/phone-disconnected.png" alt="phone-disconnected"/>
-                        <p>09000550605</p>
+                        <p>{placeholderTel}</p>
                      </div>
                      <div>
                         <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/>
@@ -24,7 +38,7 @@ export default function Aside() {
                      </div>
                      <div>
                         <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/new-post.png" alt="new-post"/>
-                        <p>olayinkaisrael001@gmail.com</p>
+                        <p>{placeholderEmail}</p>
                      </div>
                   </div>
                </aside>

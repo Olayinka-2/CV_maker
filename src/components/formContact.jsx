@@ -1,11 +1,10 @@
-export default function FormContact({formData, setFormData}) {
+export default function FormContact({formContactData, setFormContactData}) {
 
    function handleEvent(event) {
-      setFormData({
-         ...formData,
-         name: event.target.value
+      setFormContactData({
+         ...formContactData,
+         [event.target.name]: event.target.value
       });
-      console.log(formData);
    }
 
    return (
@@ -18,12 +17,16 @@ export default function FormContact({formData, setFormData}) {
                   <div>
                      <label htmlFor="Name">Name:<span style={{"color": "red"}}>*</span> </label>
                      <input type="text" id="name" placeholder="Enter your full name" required 
+                     name="fullName"
                      onChange={handleEvent}
-                     value={formData["name"]}/>
+                     value={formContactData["name"]}/>
                   </div>
                   <div>
                      <label htmlFor="email">Email:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="email" id="email" placeholder="Olayinka@gmail.com" required />
+                     <input type="email" id="email" placeholder="Olayinka@gmail.com" required
+                     name="email" 
+                     onChange={handleEvent}
+                     value={formContactData["email"]}/>
                   </div>
                   <div>
                      <label htmlFor="github">Github profile: </label>
@@ -31,7 +34,9 @@ export default function FormContact({formData, setFormData}) {
                   </div>
                   <div>
                      <label htmlFor="tel">Telephone Number:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="tel" id="tel" placeholder="0909332223" required/>
+                     <input type="tel" id="tel" placeholder="0909332223" name="telephone" required
+                     onChange={handleEvent}
+                     value={formContactData["telephone"]}/>
                   </div>
                   
                </div>

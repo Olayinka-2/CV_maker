@@ -1,10 +1,10 @@
-export default function Profile({profileName}) {
+export default function Profile({profileInfo}) {
    let newName = "";
 
-   if(profileName["name"] == "") {
+   if(profileInfo["name"] == "") {
       newName = 'John Doe';
    } else {
-      newName = profileName["name"]
+      newName = profileInfo["name"]
    }
    return (
       <>
