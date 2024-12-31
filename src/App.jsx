@@ -7,7 +7,16 @@ function App() {
   const [formContactData, setFormContactData] = useState({
     name: "",
     email: "",
-    telephone: ""
+    telephone: "",
+    github: "",
+    linkedIn: ""
+  });
+
+  const [formEducationData, setFormEducationData] = useState({
+    institutionName: "",
+    institutionCourse: "",
+    institutionDateFrom: "",
+    institutionDateTo: ""
   });
 
 
@@ -15,8 +24,8 @@ function App() {
     return (
       <>
         <Header />
-        <CvForm formContactData={formContactData} setFormContactData = {setFormContactData} />
-        <Cv formContactData={formContactData}/>
+        <CvForm formContactData={formContactData} setFormContactData = {setFormContactData} formEducationData = {formEducationData} setFormEducationData = {setFormEducationData} />
+        <Cv formContactData={formContactData} formEducationData={formEducationData}/>
       </>
     )
 }

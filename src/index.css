@@ -206,6 +206,7 @@ main {
   padding: 0 2rem 2rem;
   border-left: 2px solid #F1AB08;
   position: relative;
+  text-align: left;
 }
 
 .experience-content:last-of-type, .education-content:last-of-type {
@@ -224,9 +225,13 @@ main {
 }
 
 .experience-date, .education-date {
-  flex-basis: 50%;
+  flex-basis: 18rem;
   font-size: 2rem;
   color: #F1AB08;
+}
+
+.education-details, .experience-details {
+  flex-basis: 100%;
 }
 
 .experience-details h4, .education-details h4 {

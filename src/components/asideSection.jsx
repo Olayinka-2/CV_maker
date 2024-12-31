@@ -1,6 +1,8 @@
 export default function Aside({profileInfo}) {
    let placeholderEmail = "";
    let placeholderTel = "";
+   let placeholderGit = "";
+   let placeholderLinkedIn = "";
 
    if(profileInfo["email"] == "") {
       placeholderEmail = 'Johndoe@gmail.com';
@@ -12,6 +14,18 @@ export default function Aside({profileInfo}) {
       placeholderTel = '09000550605';
    } else {
       placeholderTel = profileInfo["telephone"]
+   }
+
+   if(profileInfo["github"] == "") {
+      placeholderGit = "https://github.com/olayinka-2";
+   } else {
+      placeholderGit = profileInfo["github"]
+   }
+
+   if(profileInfo["linkedIn"] == "") {
+      placeholderLinkedIn = "linkedin.com/in/israel.ola";
+   } else {
+      placeholderLinkedIn = profileInfo["linkedIn"]
    }
 
    return (
@@ -30,11 +44,11 @@ export default function Aside({profileInfo}) {
                      </div>
                      <div>
                         <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github"/>
-                        <p>Github.io-Olayinka-2</p>
+                        <p>{placeholderGit}</p>
                      </div>
                      <div>
                         <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin"/>
-                        <p>linkedin.com/in/israel.ola</p>
+                        <p>{placeholderLinkedIn}</p>
                      </div>
                      <div>
                         <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/new-post.png" alt="new-post"/>

@@ -17,7 +17,7 @@ export default function FormContact({formContactData, setFormContactData}) {
                   <div>
                      <label htmlFor="Name">Name:<span style={{"color": "red"}}>*</span> </label>
                      <input type="text" id="name" placeholder="Enter your full name" required 
-                     name="fullName"
+                     name="name"
                      onChange={handleEvent}
                      value={formContactData["name"]}/>
                   </div>
@@ -30,7 +30,15 @@ export default function FormContact({formContactData, setFormContactData}) {
                   </div>
                   <div>
                      <label htmlFor="github">Github profile: </label>
-                     <input type="text" id="github" placeholder="Link to your github profile" />
+                     <input type="text" id="github" name="github" placeholder="Link to your github profile"
+                     onChange={handleEvent}
+                     value={formContactData["github"]} />
+                  </div>
+                  <div>
+                     <label htmlFor="linkedIn">LinkedIn profile: </label>
+                     <input type="text" id="linkedIn" name="linkedIn" placeholder="Link to your linkedIn profile"
+                     onChange={handleEvent}
+                     value={formContactData["linkedIn"]} />
                   </div>
                   <div>
                      <label htmlFor="tel">Telephone Number:<span style={{"color": "red"}}>*</span> </label>
