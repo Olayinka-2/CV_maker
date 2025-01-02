@@ -19,13 +19,19 @@ function App() {
     institutionDateTo: ""
   });
 
-
+  const [formExperienceData, setFormExperienceData] = useState({
+    companyName: "",
+    titleHeld: "",
+    responsibility: "",
+    companyDateFrom: "",
+    companyDateTo: ""
+  })
 
     return (
       <>
         <Header />
-        <CvForm formContactData={formContactData} setFormContactData = {setFormContactData} formEducationData = {formEducationData} setFormEducationData = {setFormEducationData} />
-        <Cv formContactData={formContactData} formEducationData={formEducationData}/>
+        <CvForm formContactData={formContactData} setFormContactData = {setFormContactData} formEducationData = {formEducationData} setFormEducationData = {setFormEducationData} formExperienceData = {formEducationData} setFormExperienceData = {setFormExperienceData}/>
+        <Cv formContactData={formContactData} formEducationData={formEducationData} formExperienceData = {formExperienceData}/>
       </>
     )
 }

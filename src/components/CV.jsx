@@ -4,7 +4,7 @@ import Experience from "./cvExperience";
 import Education from "./cvEducation";
 import EditButton from "./editBtn";
 
-export default function Cv({formContactData, formEducationData}) {
+export default function Cv({formContactData, formEducationData, formExperienceData}) {
    return (
       <>
          <main>
@@ -13,8 +13,8 @@ export default function Cv({formContactData, formEducationData}) {
             <div className="cv">
                <Aside profileInfo = {formContactData} />
                <section className="cv-content">
-                  <Profile profileInfo = {formContactData}  />
-                  <Experience />
+                  <Profile profileInfo = {formContactData} title = {formExperienceData}  />
+                  <Experience experienceInfo = {formExperienceData}/>
                   <Education educationInfo = {formEducationData} />
                </section>
             </div>

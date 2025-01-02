@@ -125,9 +125,10 @@ main {
 }
 
 .cv aside {
-  flex-basis: 40%;
+  flex-basis: 25%;
   background-color: #252525;
   padding: 5rem 2rem;
+  flex-shrink: 0;
 }
 
 .profile-picture {
@@ -255,4 +256,10 @@ main {
 .edit-cv:hover {
   background-color: #2d2a2a;
   color: #F1AB08;
+}
+
+@media screen and (max-width: 600px) {
+  .cv aside {
+    flex-shrink: 1;
+  }
 }

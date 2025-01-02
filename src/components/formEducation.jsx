@@ -5,7 +5,6 @@ export default function FormEducation({formEducationData, setFormEducationData})
          [event.target.name]: event.target.value
       });
    }
-   console.log(formEducationData);
 
    return (
       <>
