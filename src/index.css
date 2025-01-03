@@ -48,7 +48,7 @@ header p:first-child {
   color: #57595B;
 }
 
-.form-information {
+.form-information, .education-block {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
@@ -256,6 +256,24 @@ main {
 .edit-cv:hover {
   background-color: #2d2a2a;
   color: #F1AB08;
+}
+
+.form-information {
+  position: relative;
+  padding: 0 0 3.5rem;
+}
+
+.addToggle, .removeToggle {
+  position: absolute;
+  right: 0;
+}
+
+.addToggle {
+  top: 2rem;
+}
+
+.removeToggle {
+  bottom: 0;
 }
 
 @media screen and (max-width: 600px) {

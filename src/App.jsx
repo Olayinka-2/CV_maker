@@ -12,20 +12,23 @@ function App() {
     linkedIn: ""
   });
 
-  const [formEducationData, setFormEducationData] = useState({
+  const [formEducationData, setFormEducationData] = useState([
+    {
     institutionName: "",
     institutionCourse: "",
     institutionDateFrom: "",
     institutionDateTo: ""
-  });
+  }
+]);
 
-  const [formExperienceData, setFormExperienceData] = useState({
+  const [formExperienceData, setFormExperienceData] = useState(
+    {
     companyName: "",
     titleHeld: "",
     responsibility: "",
     companyDateFrom: "",
     companyDateTo: ""
-  })
+  });
 
     return (
       <>
