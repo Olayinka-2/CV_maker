@@ -6,23 +6,27 @@ export default function FormEducation({formEducationData, setFormEducationData})
    }
 
    function handleAddEducationData() {
+      if(formEducationData.length > 2) {
+         return;
+      }
       setFormEducationData(
          [
             ...formEducationData,
             {
-               companyName: "",
-               titleHeld: "",
-               responsibility: "",
-               companyDateFrom: "",
-               companyDateTo: ""
+               institutionName: "",
+               institutionCourse: "",
+               institutionDateFrom: "",
+               institutionDateTo: ""
             }
          ]
       )
    }
 
    const removeEducationBlock = (index) => {
-      const updatedEducation = formEducationData.filter((_, i) => i !== index);
-      setFormEducationData(updatedEducation);
+      if(index > 0) {
+         const updatedEducation = formEducationData.filter((_, i) => i !== index);
+         setFormEducationData(updatedEducation);
+      }
    };
 
    return (
@@ -38,7 +42,13 @@ export default function FormEducation({formEducationData, setFormEducationData})
                formEducationData.map((education, index) => (
                   <div key={index} className="education-block">
                      <div className="section-name">
-                        <div className="section-index">{index + 1}</div>
+                        {
+                           index + 2 < 3 && <div className="section-index">
+                              {
+                                 `${index + 2}`
+                              }
+                           </div>
+                        }
                         <p>Education</p>
                      </div>
 

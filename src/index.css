@@ -46,6 +46,9 @@ header p:first-child {
   padding: 2rem;
   width: 40rem;
   color: #57595B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-information, .education-block {
@@ -92,6 +95,11 @@ header p:first-child {
   color: #fff;
 }
 
+.submitBtn-container {
+  padding: 0 4rem;
+  align-self: stretch;
+}
+
 .submitBtn-container button {
   text-align: center;
   width: 100%;
@@ -102,6 +110,7 @@ header p:first-child {
   font-size: 1.8rem;
   background-color: #79CB82;
   color: #fff;
+  margin: 0 auto;
 }
 
 main {

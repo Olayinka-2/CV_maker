@@ -1,58 +1,100 @@
-import EditButton from "./editBtn";
-
 export default function FormExperience({formExperienceData, setFormExperienceData}) {
-   function handleEvent(event) {
-      setFormExperienceData({
-         ...formExperienceData,
-         [event.target.name]: event.target.value
-      });
+   function handleEvent(index, event) {
+      let updatedFormExperienceData = [...formExperienceData];
+      updatedFormExperienceData[index][event.target.name] = event.target.value;
+      setFormExperienceData(updatedFormExperienceData);
    }
+
+   function handleAddExperienceData() {
+      if(formExperienceData.length > 2) {
+         return;
+      }
+      setFormExperienceData(
+         [
+            ...formExperienceData,
+            {
+               companyName: "",
+               titleHeld: "",
+               responsibility: "",
+               companyDateFrom: "",
+               companyDateTo: ""
+            }
+         ]
+      )
+   }
+
+   const removeExperienceBlock = (index) => {
+      if(index > 0) {
+         const updatedExperience = formExperienceData.filter((_, i) => i !== index);
+         setFormExperienceData(updatedExperience);
+      }
+   };
 
    return (
       <>
          <div className="form-information">
-                  <div className="section-name">
-                     <div className="section-index">3</div>
-                     <p>Experience</p>
-                  </div>
+            <div className="toggle-sections">
+               <div className="addToggle">
+                  <button onClick={handleAddExperienceData}>Add</button>
+               </div>
+            </div>
+            {
+               formExperienceData.map((experience, index) => (
+                  <div key={index} className="education-block">
+                     <div className="section-name">
+                        {
+                           index + 3 < 4 && <div className="section-index">
+                              {
+                                 `${index + 3}`
+                              }
+                           </div>
+                        }
+                        <p>Experience</p>
+                     </div>
+
+                     <div>
+                        <label htmlFor={`company-name-${index}`}>Name of Company/Firm:<span style={{"color": "red"}}>*</span> </label>
+                        <input type="text" id={`company-name-${index}`}placeholder="Enter your company name" 
+                        name = "companyName"
+                        value={experience.companyName}
+                        onChange={(e) => handleEvent(index, e)}
+                        required />
+                     </div>
+                     <div>
+                        <label htmlFor={`title-${index}`}>Position title:<span style={{"color": "red"}}>*</span> </label>
+                        <input type="text" id={`title-${index}`}placeholder="Enter your title name" required
+                        name = "titleHeld"
+                        value={experience.titleHeld}
+                        onChange={(e) => handleEvent(index, e)}/>
+                     </div>
+                  
                   <div>
-                     <label htmlFor="company-name">Name of Company/Firm:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="text" id="company-name" placeholder="Enter your institution name" 
-                     name = "companyName"
-                     value={formExperienceData["companyName"]}
-                     onChange={handleEvent}
-                     required />
-                  </div>
-                  <div>
-                     <label htmlFor="title">Position title:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="text" id="title" placeholder="Enter your title name" required
-                     name = "titleHeld"
-                     value={formExperienceData["titleHeld"]}
-                     onChange={handleEvent}/>
-                  </div>
-                  <div>
-                     <label htmlFor="responsibility">Responsibility:<span style={{"color": "red"}}>*</span> </label>
-                     <textarea name="responsibility" id="responsibility" rows="10"
-                     onChange={handleEvent} placeholder="Maximum of 40 words"
+                     <label htmlFor={`responsibility-${index}`}>Responsibility:<span style={{"color": "red"}}>*</span> </label>
+                     <textarea name="responsibility" id={`responsibility-${index}`} rows="10"
+                     onChange={(e) => handleEvent(index, e)} placeholder="Maximum of 40 words"
                      ></textarea>
                   </div>
                   <div>
-                     <label htmlFor="study-date-from">From:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="date" id="study-date-from" required 
-                     name="companyDateFrom" value={formExperienceData["companyDateFrom"]}
-                     onChange={handleEvent} />
+                     <label htmlFor={`study-date-from-${index}`}>From:<span style={{"color": "red"}}>*</span> </label>
+                     <input type="date" id={`study-date-from-${index}`} required 
+                     name="companyDateFrom" 
+                     value={experience.companyDateFrom}
+                     onChange={(e) => handleEvent(index, e)} />
                   </div>
                   <div>
-                     <label htmlFor="study-date-to">To:<span style={{"color": "red"}}>*</span> </label>
-                     <input type="date" id="study-date-to" required 
+                     <label htmlFor={`study-date-to-${index}`}>To:<span style={{"color": "red"}}>*</span> </label>
+                     <input type="date" id={`study-date-to-${index}`} required 
                      name="companyDateTo" value={formExperienceData["companyDateTo"]}
-                     onChange={handleEvent}
+                     onChange={(e) => handleEvent(index, e)}
                      />
                   </div>
-                  <div className="submitBtn-container">
-                     <EditButton text = 'Submit'/>
+                  <div className="removeToggle">
+                     <button onClick={() => removeExperienceBlock(index)}>Remove</button>
                   </div>
                </div>
+         ))
+      }
+      </div>
       </>
    )
 }
