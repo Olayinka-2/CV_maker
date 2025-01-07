@@ -7,12 +7,12 @@ export default function Profile({profileInfo, title}) {
    } else {
       newName = profileInfo["name"]
    }
-   if(title["titleHeld"] == "") {
+   if(title == "") {
       titleHeld = 'Frontend Web developer';
    } else {
-      titleHeld = title["titleHeld"];
+      titleHeld = title;
    }
-   console.log(titleHeld);
+   console.log(title);
    return (
       <>
          <div className="profile-info">

@@ -111,11 +111,12 @@ header p:first-child {
   background-color: #79CB82;
   color: #fff;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 main {
-  background: #ae79cb;
   position: relative;
+  display: none;
 }
 
 .cv-page-section {
@@ -278,11 +279,30 @@ main {
 }
 
 .addToggle {
-  top: 2rem;
+  top: 2.5rem;
 }
 
 .removeToggle {
+  right: -2rem;
   bottom: 0;
+}
+
+.addToggle button {
+  background-color: #79CB82;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.removeToggle button {
+  background-color: #f90000;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
