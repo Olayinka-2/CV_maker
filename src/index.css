@@ -295,16 +295,18 @@ main {
   outline: none;
   border: none;
   cursor: pointer;
+  font-size: 1.8rem;
 }
 
 .removeToggle button {
-  background-color: #f95300;
+  background-color: #f95700;
   color: #fff;
   padding: .5rem 1rem;
   font-weight: 600;
   outline: none;
   border: none;
   cursor: pointer;
+  font-size: 1.8rem;
 }
 
 @media screen and (max-width: 600px) {
