@@ -289,6 +289,7 @@ main {
 
 .addToggle button {
   background-color: #79CB82;
+  color: #fff;
   padding: .5rem 1rem;
   font-weight: 600;
   outline: none;
@@ -297,7 +298,8 @@ main {
 }
 
 .removeToggle button {
-  background-color: #f90000;
+  background-color: #f95300;
+  color: #fff;
   padding: .5rem 1rem;
   font-weight: 600;
   outline: none;
