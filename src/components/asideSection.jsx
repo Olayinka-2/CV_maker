@@ -15,11 +15,14 @@ const defaultContactInfo = {
          contactDetails[element] = defaultContactInfo[element]
       }
    }
+   let display = "profile-photo.png";
    
    return (
       <aside>
          <div className="profile-picture">
-         <img src="profile-photo.png" alt="profile-photo" />
+            {
+               display == "profile-photo.png" && <img src="profile-photo.png" alt="profile-photo" />
+            }
          </div>
          <div className="contact-container">
          <div className="contact-heading">Contact</div>
