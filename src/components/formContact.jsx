@@ -48,6 +48,12 @@ export default function FormContact({formContactData, setFormContactData}) {
                      onChange={handleEvent}
                      value={formContactData["telephone"]}/>
                   </div>
+                  <div>
+                     <label htmlFor={`Bio`}>Bio:<span style={{"color": "red"}}>*</span> </label>
+                     <textarea name="Bio" id={`Bio`} rows="10"
+                     onChange={handleEvent} placeholder="Maximum of 40 words"
+                     ></textarea>
+                  </div>
                </div>
       </>
    )
