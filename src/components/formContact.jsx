@@ -1,5 +1,6 @@
 export default function FormContact({formContactData, setFormContactData}) {
 
+
    function handleEvent(event) {
       setFormContactData({
          ...formContactData,
@@ -7,6 +8,7 @@ export default function FormContact({formContactData, setFormContactData}) {
       });
    }
 
+   console.log(formContactData["imageUrl"]);
    return (
       <>
       <div className="form-information" id="form-contact">
@@ -46,7 +48,6 @@ export default function FormContact({formContactData, setFormContactData}) {
                      onChange={handleEvent}
                      value={formContactData["telephone"]}/>
                   </div>
-                  
                </div>
       </>
    )

@@ -1,4 +1,4 @@
-   const defaultContactInfo = {
+const defaultContactInfo = {
    telephone: '09000550605',
    github: 'https://github.com/olayinka-2',
    linkedIn: 'linkedin.com/in/israel.ola',
@@ -8,7 +8,6 @@
    function Aside({ profileInfo }) {
       let contactDetails = {};
 
-   // Combine default values with profile info using spread syntax
    for(let element in profileInfo) {
       if(profileInfo[element] !== "")  {
          contactDetails[element] = profileInfo[element];
@@ -20,7 +19,7 @@
    return (
       <aside>
          <div className="profile-picture">
-         <img src="profile-photo.jpg" alt="profile-photo" />
+         <img src="profile-photo.png" alt="profile-photo" />
          </div>
          <div className="contact-container">
          <div className="contact-heading">Contact</div>

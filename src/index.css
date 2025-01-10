@@ -62,7 +62,7 @@ header p:first-child {
   padding: 0 2rem;
 }
 
-.cv-section form input, textarea {
+.cv-section form input:not(#profile-image), textarea {
   background-color: #dbdddd;
   border: none;
   outline: none;
@@ -272,6 +272,24 @@ main {
   position: relative;
   padding: 0 0 3.5rem;
 }
+
+/* .profile-image-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.profile-image-container label {
+  text-wrap: nowrap;
+}
+
+#profile-image {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} */
 
 .addToggle, .removeToggle {
   position: absolute;

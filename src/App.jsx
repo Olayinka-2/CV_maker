@@ -9,7 +9,7 @@ function App() {
     email: "",
     telephone: "",
     github: "",
-    linkedIn: ""
+    linkedIn: "",
   });
 
   const [formEducationData, setFormEducationData] = useState([
