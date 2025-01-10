@@ -1,12 +1,29 @@
 export default function FormContact({formContactData, setFormContactData}) {
+   const handleEvent = (event) => {
+      const {name, value, files} = event.target;
 
-
-   function handleEvent(event) {
+      if(name === "imageUrl" && files && files[0]) {
+         const file = files[0];
+         setFormContactData({
+            ...formContactData,
+            imageUrl: URL.createObjectURL(file),
+         });
+         return;
+      }
       setFormContactData({
          ...formContactData,
-         [event.target.name]: event.target.value
-      });
+         [name]: value,
+      })
    }
+   // function handleEvent(event) {
+   //    if(event.target.name == 'imageUrl') {
+   //       setImageFile(event.target.files[0]);
+   //    }
+   //    setFormContactData({
+   //       ...formContactData,
+   //       [event.target.name]: event.target.value
+   //    });
+   // }
 
    console.log(formContactData["imageUrl"]);
    return (
@@ -53,6 +70,11 @@ export default function FormContact({formContactData, setFormContactData}) {
                      <textarea name="Bio" id={`Bio`} rows="10"
                      onChange={handleEvent} placeholder="Maximum of 40 words"
                      ></textarea>
+                  </div>
+                  <div>
+                     <label htmlFor={`imageUrl`}>Profile image:<span style={{"color": "red"}}>*</span> </label>
+                     <input type="file" name="imageUrl" id="imageUrl" accept="image/png, image/jpg, image/jpeg" 
+                     onChange={handleEvent}/>
                   </div>
                </div>
       </>

@@ -3,6 +3,7 @@ const defaultContactInfo = {
    github: 'https://github.com/olayinka-2',
    linkedIn: 'linkedin.com/in/israel.ola',
    email: 'Johndoe@gmail.com',
+   imageUrl: "profile-photo.png",
    };
 
    function Aside({ profileInfo }) {
@@ -15,9 +16,14 @@ const defaultContactInfo = {
          contactDetails[element] = defaultContactInfo[element]
       }
    }
+   console.log(contactDetails.imageUrl)
+
    
    return (
       <aside>
+         <div className="profile-picture">
+         <img src={contactDetails.imageUrl} alt="profile-photo" />
+         </div>
          <div className="contact-container">
          <div className="contact-heading">Contact</div>
          <div>

@@ -11,6 +11,7 @@ function App() {
     github: "",
     linkedIn: "",
     Bio: "",
+    imageUrl: ""
   });
 
   const [formEducationData, setFormEducationData] = useState([
